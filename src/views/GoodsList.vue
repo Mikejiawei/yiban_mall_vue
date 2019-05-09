@@ -100,6 +100,7 @@ export default {
         NavBread: NavBread,
         Modal:Modal
     },
+    //全局拦截器
     mounted: function(){
         this.getGoodsList();
         this.checkLogin();
