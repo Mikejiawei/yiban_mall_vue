@@ -85,8 +85,10 @@ import Modal from "@/components/Modal.vue"
 import axios from 'axios'
 
 export default {
+    // 返回必须是 data函数
     data(){
         return{
+            // 返回的是对象
             goodsList:[],
             code:this.$route.query.code,
             mdShow:false,
@@ -95,16 +97,19 @@ export default {
         }
     },
     components:{
+        // 引入子组件
         NavHeader: NavHeader,
         NavFooter: NavFooter,
         NavBread: NavBread,
         Modal:Modal
     },
+    // 拦截器
     mounted: function(){
         this.getGoodsList();
         this.checkLogin();
     },
     
+    // 函数 调用接口
     methods:{
       checkLogin(){
         if(this.code){
@@ -142,19 +147,6 @@ export default {
             
           })
         },
-
-
-      // addList(productId){
-      //   axios.post("/goods/addList",{
-      //     productId: productId
-      //   }).then((res)=>{
-      //     if(res.data.status == 0){
-      //       this.mdShowCart = true;
-      //     }else{
-      //       this.mdShow = true; 
-      //     }
-      //   })
-      // },
 
 
       closeModal(){
