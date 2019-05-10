@@ -34,7 +34,7 @@
           <ul>
             <li v-for="item in goodsList" :key='item' >
               <div class="pic">
-                <a href="#"><img :src="'/static/' + item.productImg" ></a>
+                <a href="#"><img v-lazy ="'/static/' + item.productImg" ></a>
               </div>
               <div class="main">
                 <div class="name">{{item.productName}}</div>

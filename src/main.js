@@ -4,9 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuex from 'vuex'
+import VueLazyload from 'vue-lazyload'
 
 Vue.config.productionTip = false
 Vue.use(Vuex)
+Vue.use(VueLazyload, {
+  loading: './../static/loading.gif'
+})
 
 
 const store = new Vuex.Store({
