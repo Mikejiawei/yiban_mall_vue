@@ -10,15 +10,13 @@
   <div class="navbar">
     <div class="navbar-left-container">
       <a href="/">
-        <img class="navbar-brand-logo" src="static/imooc.jpg"></a>
+        <img class="navbar-brand-logo" src="static/icon.jpg"></a>
     </div>
     <div class="navbar-right-container" style="display: flex;">
       <div class="navbar-menu-container">
-        <!--<a href="/" class="navbar-link">我的账户</a>-->
         <span class="navbar-link"></span>
-        <!-- <button class="btn btn-primary" type="submit" @click="login">Login</button> -->
-        <a href="https://oauth.yiban.cn/code/html?client_id=8c9c74ab59696546&redirect_uri=http://localhost:8080/" class="navbar-link"  v-if="!nickName">Login</a>
-        <a href="javascript:void(0)" class="navbar-link" @click="logout" v-if="nickName">Logout</a>
+        <!-- <a href="https://oauth.yiban.cn/code/html?client_id=8c9c74ab59696546&redirect_uri=http://localhost:8080/" class="navbar-link"  v-if="!nickName">Login</a> -->
+        <!-- <a href="javascript:void(0)" class="navbar-link" @click="logout" v-if="nickName">Logout</a> -->
         <!-- 显示昵称 -->
         <p>{{nickName}}</p>
         <div class="navbar-cart-container">
