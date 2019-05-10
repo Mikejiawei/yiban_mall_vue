@@ -32,7 +32,7 @@
       <div class="accessory-list-wrap">
         <div class="accessory-list col-4">
           <ul>
-            <li v-for="item in goodsList">
+            <li v-for="item in goodsList" :key='item' >
               <div class="pic">
                 <a href="#"><img :src="'/static/' + item.productImage" ></a>
               </div>
