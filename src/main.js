@@ -10,21 +10,21 @@ Vue.use(Vuex)
 
 
 const store = new Vuex.Store({
-        state: {
-            nickName: ''
-        },
-        mutations: {
-            updateUserInfo(state, nickName) {
-                state.nickName = nickName
-            }
-        }
+  state: {
+    nickName: ''
+  },
+  mutations: {
+    updateUserInfo(state, nickName) {
+      state.nickName = nickName
+    }
+  }
 
-    })
-    /* eslint-disable no-new */
+})
+/* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    store,
-    router,
-    components: { App },
-    template: '<App/>'
+  el: '#app',
+  store,
+  router,
+  components: { App },
+  template: '<App/>'
 })
