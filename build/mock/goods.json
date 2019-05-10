@@ -1,0 +1,53 @@
+{
+    "status": "0",
+    "msg": "",
+    "result": [{
+            "productId": "1001",
+            "productName": "小米音响",
+            "productPrice": 299,
+            "productImg": "1.jpg",
+            "sell": 24,
+            "rest": 10
+        },
+        {
+            "productId": "1002",
+            "productName": "小米",
+            "productPrice": 2999,
+            "productImg": "2.jpg",
+            "sell": 122,
+            "rest": 10
+        },
+        {
+            "productId": "1003",
+            "productName": "XXX",
+            "productPrice": 699,
+            "productImg": "3.jpg",
+            "sell": 34,
+            "rest": 10
+        },
+        {
+            "productId": "1004",
+            "productName": "YYY",
+            "productPrice": 1299,
+            "productImg": "4.jpg",
+            "sell": 54,
+            "rest": 10
+        },
+        {
+            "productId": "1005",
+            "productName": "ZZ",
+            "productPrice": 123,
+            "productImg": "5.jpg",
+            "sell": 66,
+            "rest": 10
+        },
+        {
+            "productId": "1006",
+            "productName": "xx",
+            "productPrice": 345,
+            "productImg": "6.jpg",
+            "sell": 32,
+            "rest": 10
+        }
+    ]
+}

@@ -34,11 +34,11 @@
           <ul>
             <li v-for="item in goodsList" :key='item' >
               <div class="pic">
-                <a href="#"><img :src="'/static/' + item.productImage" ></a>
+                <a href="#"><img :src="'/static/' + item.productImg" ></a>
               </div>
               <div class="main">
                 <div class="name">{{item.productName}}</div>
-                <div class="price">{{item.salePrice}}</div>
+                <div class="price">{{item.productPrice}}</div>
                 <div class="btn-area">
                   <a href="javascript:;" class="btn btn-cart" @click="addList(item.productId)">加入购物车</a>
                 </div>
@@ -50,7 +50,7 @@
     </div>
   </div>
 </div>
-<modal v-bind:mdShow="mdShow" v-on:close="closeModal">
+<!-- <modal v-bind:mdShow="mdShow" v-on:close="closeModal">
     <p slot="message">
         请先登录,否则无法加入到购物车中!
     </p>
@@ -69,7 +69,7 @@
           <a class="btn btn--m" href="javascript:;" @click="mdShowCart = false">继续购物</a>
           <router-link class="btn btn--m btn--red" href="javascript:;" to="/cart">查看购物车</router-link>
         </div>
-</modal>
+</modal> -->
 
 <nav-footer></nav-footer>
     </div>    
@@ -100,10 +100,12 @@ export default {
         NavBread: NavBread,
         Modal:Modal
     },
-    //全局拦截器
+    // 生命周期初始化
     mounted: function(){
-        this.getGoodsList();
-        this.checkLogin();
+      this.getGoodsList()
+        // this.getGoodsList();
+        // this.checkLogin();
+
     },
     
     methods:{
@@ -119,20 +121,24 @@ export default {
                     this.$store.commit("updateUserInfo",res.result.userName);
           })
         }
-      }
-      ,
-      getGoodsList(){
-        
-          axios.get("/goods/list").then((result)=>{
-            // 用 result.data 的方法获取 商品列表
-            var res = result.data;
-            this.goodsList = res.result.list;
-
-          })
-
-        
-          
       },
+
+      // 模拟接口 getGoodsList()
+      getGoodsList(){
+        axios.get("/api/goods").then((result)=>{
+          var res = result.data;
+          this.goodsList = res.result
+        })
+      },
+
+      // getGoodsList(){       
+      //     axios.get("/goods/list").then((result)=>{
+      //       // 用 result.data 的方法获取 商品列表
+      //       var res = result.data;
+      //       this.goodsList = res.result.list;
+
+      //     })          
+      // },
 
       // 跳转支付的路由
         addList(productId){
@@ -143,20 +149,6 @@ export default {
             
           })
         },
-
-
-      // addList(productId){
-      //   axios.post("/goods/addList",{
-      //     productId: productId
-      //   }).then((res)=>{
-      //     if(res.data.status == 0){
-      //       this.mdShowCart = true;
-      //     }else{
-      //       this.mdShow = true; 
-      //     }
-      //   })
-      // },
-
 
       closeModal(){
               this.mdShow = false;
