@@ -2,12 +2,12 @@
     "status": "0",
     "msg": "",
     "result": [{
-            "productId": "1001",
-            "productName": "小米音响",
-            "productPrice": 299,
-            "productImg": "1.jpg",
-            "sell": 24,
-            "rest": 10
+            "id": "1001",
+            "name": "小米音响",
+            "price": 299,
+            "imgUrl": "1.jpg",
+            "sellNum": 24,
+            "lastNum": 10
         },
         {
             "productId": "1002",
