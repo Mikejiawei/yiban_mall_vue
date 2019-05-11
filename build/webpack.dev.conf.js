@@ -63,6 +63,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           data: purchaseData
         })
       })
+      app.post('/api/checkOrder',(req,res)=>{
+        if(req.body){
+          res.json(req.body)
+        }
+        //var name = req.body.name
+        //var pwd = req.body.pwd
+        res.end("bye")
+      })
 
     }
 

@@ -5,5 +5,5 @@ const getPurchase = get('api/purchase')
 
 export {
   getGoods,
-  getPurchase
+  getPurchase,
 }

@@ -84,6 +84,7 @@ import NavBread from '@/components/NavBread.vue'
 import Modal from "@/components/Modal.vue"
 import axios from 'axios'
 import { getGoods } from '@/api'
+import { checkOrder } from "@/api";
 
 export default {
     // 返回必须是 data函数
@@ -107,6 +108,7 @@ export default {
     // 生命周期初始化
     mounted: function(){
       this._getGoods();
+      this._checkOrder()
       //this._getPurchase()
       // this.getGoodsList();
       // this.checkLogin();
@@ -122,6 +124,18 @@ export default {
           this.goodsList = goods.result
           //console.log(this.goodsList)
         })
+      },
+      _checkOrder(){
+        axios({
+          url:"api/checkOrder",
+          method:"post",
+          headers:{'Content-Type': 'application/x-www-form-urlencoded'},
+          data:{
+            name:"123"
+          }
+        }).then(res=>{
+          console.log(res.data)
+        }).catch(e=>{})
       },
 
       // getGoodsList(){       
