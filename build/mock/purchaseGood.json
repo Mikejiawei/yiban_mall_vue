@@ -1,0 +1,63 @@
+{
+    "result": [{
+            "yibanId": "1001",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "true",
+            "price": "600"
+        },
+        {
+            "yibanId": "1002",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false",
+            "price": "290"
+        },
+        {
+            "yibanId": "1003",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false",
+            "price": "300"
+        },
+        {
+            "yibanId": "1004",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false",
+            "price": "600"
+        },
+        {
+            "yibanId": "1005",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false",
+            "price": "600"
+        },
+        {
+            "yibanId": "1006",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false",
+            "price": "600"
+        }
+    ]
+}

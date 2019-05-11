@@ -32,13 +32,13 @@
       <div class="accessory-list-wrap">
         <div class="accessory-list col-4">
           <ul>
-            <li v-for="item in goodsList">
+            <li v-for="(good,index) in goodsList" :key='index' >
               <div class="pic">
-                <a href="#"><img :src="'/static/' + item.productImage" ></a>
+                <a href="#"><img v-lazy ="'/static/' + good.imgUrl" ></a>
               </div>
               <div class="main">
-                <div class="name">{{item.productName}}</div>
-                <div class="price">{{item.salePrice}}</div>
+                <div class="name">{{good.name}}</div>
+                <div class="price">{{good.price}}</div>
                 <div class="btn-area">
                   <a href="javascript:;" class="btn btn-cart" @click="addList(item.productId)">加入购物车</a>
                 </div>
@@ -50,7 +50,7 @@
     </div>
   </div>
 </div>
-<modal v-bind:mdShow="mdShow" v-on:close="closeModal">
+<!-- <modal v-bind:mdShow="mdShow" v-on:close="closeModal">
     <p slot="message">
         请先登录,否则无法加入到购物车中!
     </p>
@@ -69,20 +69,21 @@
           <a class="btn btn--m" href="javascript:;" @click="mdShowCart = false">继续购物</a>
           <router-link class="btn btn--m btn--red" href="javascript:;" to="/cart">查看购物车</router-link>
         </div>
-</modal>
+</modal> -->
 
 <nav-footer></nav-footer>
     </div>    
 </template>
 <script>
-import './../assets/css/base.css'
-import './../assets/css/product.css'
-import './../assets/css/login.css'
-import NavHeader from '@/components/NavHeader.vue'
+// import './../assets/css/base.css'
+// import './../assets/css/product.css'
+// import './../assets/css/login.css'
+import NavHeader from '@/components/NavHeader/NavHeader.vue'
 import NavFooter from "@/components/NavFooter.vue"
 import NavBread from '@/components/NavBread.vue'
 import Modal from "@/components/Modal.vue"
 import axios from 'axios'
+import { getGoods } from '@/api'
 
 export default {
     // 返回必须是 data函数
@@ -103,41 +104,36 @@ export default {
         NavBread: NavBread,
         Modal:Modal
     },
-    // 拦截器
+    // 生命周期初始化
     mounted: function(){
-        this.getGoodsList();
-        this.checkLogin();
+      this._getGoods();
+      //this._getPurchase()
+      // this.getGoodsList();
+      // this.checkLogin();
+
     },
     
     // 函数 调用接口
     methods:{
-      checkLogin(){
-        if(this.code){
-          axios.get("/goods/login",{
-                    params:{
-                      code:this.code 
-                    }
-                  }).then((result)=>{
-                    var res = result.data;
-                    this.goodsList = res.result.list;
-                    this.$store.commit("updateUserInfo",res.result.userName);
-          })
-        }
-      }
-      ,
-      getGoodsList(){
-        
-          axios.get("/goods/list").then((result)=>{
-            // 用 result.data 的方法获取 商品列表
-            var res = result.data;
-            this.goodsList = res.result.list;
-
-          })
-
-        
-          
+      
+      // 接口 获取goods
+      _getGoods(){
+        getGoods().then((goods)=>{
+          this.goodsList = goods.result
+          //console.log(this.goodsList)
+        })
       },
 
+      // getGoodsList(){       
+      //     axios.get("/goods/list").then((result)=>{
+      //       // 用 result.data 的方法获取 商品列表
+      //       var res = result.data;
+      //       this.goodsList = res.result.list;
+
+      //     })          
+      // },
+
+      // git learn
       // 跳转支付的路由
         addList(productId){
           axios.post('/goods/addList',{
@@ -148,7 +144,10 @@ export default {
           })
         },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17b3d1cbbd6b69362b625f624f9a540c807756d3
       closeModal(){
               this.mdShow = false;
               this.mdShowCart = false;

@@ -4,18 +4,24 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuex from 'vuex'
+import VueLazyload from 'vue-lazyload'
+import Cube from 'cube-ui'
 
 Vue.config.productionTip = false
-Vue.use(Vuex);
+Vue.use(Vuex)
+Vue.use(VueLazyload, {
+  loading: './../static/loading.gif'
+})
+Vue.use(Cube)
 
 
 const store = new Vuex.Store({
-  state:{
+  state: {
     nickName: ''
   },
   mutations: {
-    updateUserInfo(state,nickName){
-      state.nickName = nickName;
+    updateUserInfo(state, nickName) {
+      state.nickName = nickName
     }
   }
 

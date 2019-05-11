@@ -1,6 +1,7 @@
 <template>
     <section class="bread">
         <div class="bread-wrap">
+            <cube-button @click="showDialog">show dialog</cube-button>
             <nav class="">
                 <a href="/">
                     Home
@@ -42,6 +43,15 @@
         data(){
             return{
                 msg:'hello vue'
+            }
+        },
+        methods:{
+            showDialog(){
+                this.$createDialog({
+                    type:'alert',
+                    title:'Alert',
+                    content:'dialog content'
+                }).show()
             }
         }
     }

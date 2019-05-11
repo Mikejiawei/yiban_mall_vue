@@ -10,20 +10,6 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/goods':{
-        target:'http://localhost:3000',
-        changeOrigin: true,//允许跨域
-      },
-      '/users': {
-        target: 'http://localhost:3000',
-        changeOrigin: true
-      },
-      '/users/*':{
-        target:'http://localhost:3000',
-        changeOrigin: true
-      }
-    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -33,10 +19,10 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
-     * Source Maps
-     */
+         * Source Maps
+         */
 
     // https://webpack.js.org/configuration/devtool/#development
     devtool: 'cheap-module-eval-source-map',
@@ -59,8 +45,8 @@ module.exports = {
     assetsPublicPath: '/',
 
     /**
-     * Source Maps
-     */
+         * Source Maps
+         */
 
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
