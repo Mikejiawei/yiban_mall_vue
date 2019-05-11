@@ -2,7 +2,7 @@
   <div class="header" @click="showDetail">
     <div class="content-wrapper">
       <div class="avatar">
-        <img width="64" height="64" :src="user.avatar">
+        <img width="32" height="32" :src="user.avatar">
       </div>
       <div class="content">
         <div class="title">

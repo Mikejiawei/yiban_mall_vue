@@ -1,7 +1,7 @@
 <template>
     <section class="bread">
         <div class="bread-wrap">
-            <cube-button @click="showDialog">show dialog</cube-button>
+            <!-- <cube-button @click="showDialog">show dialog</cube-button> -->
             <nav class="">
                 <a href="/">
                     Home
