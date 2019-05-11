@@ -144,10 +144,6 @@ export default {
           })
         },
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 17b3d1cbbd6b69362b625f624f9a540c807756d3
       closeModal(){
               this.mdShow = false;
               this.mdShowCart = false;
