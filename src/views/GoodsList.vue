@@ -75,10 +75,10 @@
     </div>    
 </template>
 <script>
-import './../assets/css/base.css'
-import './../assets/css/product.css'
-import './../assets/css/login.css'
-import NavHeader from '@/components/NavHeader.vue'
+// import './../assets/css/base.css'
+// import './../assets/css/product.css'
+// import './../assets/css/login.css'
+import NavHeader from '@/components/NavHeader/NavHeader.vue'
 import NavFooter from "@/components/NavFooter.vue"
 import NavBread from '@/components/NavBread.vue'
 import Modal from "@/components/Modal.vue"
