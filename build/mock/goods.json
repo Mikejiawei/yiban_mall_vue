@@ -1,6 +1,4 @@
 {
-    "status": "0",
-    "msg": "",
     "result": [{
             "id": "1001",
             "name": "小米音响",
@@ -10,44 +8,44 @@
             "lastNum": 10
         },
         {
-            "productId": "1002",
-            "productName": "小米",
-            "productPrice": 2999,
-            "productImg": "2.jpg",
-            "sell": 122,
-            "rest": 10
+            "id": "1002",
+            "name": "小米",
+            "price": 2999,
+            "imgUrl": "2.jpg",
+            "sellNum": 122,
+            "lastNum": 10
         },
         {
-            "productId": "1003",
-            "productName": "XXX",
-            "productPrice": 699,
-            "productImg": "3.jpg",
-            "sell": 34,
-            "rest": 10
+            "id": "1003",
+            "name": "XXX",
+            "price": 699,
+            "imgUrl": "3.jpg",
+            "sellNum": 34,
+            "lastNum": 10
         },
         {
-            "productId": "1004",
-            "productName": "YYY",
-            "productPrice": 1299,
-            "productImg": "4.jpg",
-            "sell": 54,
-            "rest": 10
+            "id": "1004",
+            "name": "XXX",
+            "price": 699,
+            "imgUrl": "4.jpg",
+            "sellNum": 34,
+            "lastNum": 10
         },
         {
-            "productId": "1005",
-            "productName": "ZZ",
-            "productPrice": 123,
-            "productImg": "5.jpg",
-            "sell": 66,
-            "rest": 10
+            "id": "1005",
+            "name": "XXX",
+            "price": 699,
+            "imgUrl": "5.jpg",
+            "sellNum": 34,
+            "lastNum": 10
         },
         {
-            "productId": "1006",
-            "productName": "xx",
-            "productPrice": 345,
-            "productImg": "6.jpg",
-            "sell": 32,
-            "rest": 10
+            "id": "1006",
+            "name": "XXX",
+            "price": 699,
+            "imgUrl": "6.jpg",
+            "sellNum": 34,
+            "lastNum": 10
         }
     ]
 }

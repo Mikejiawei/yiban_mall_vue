@@ -12,6 +12,7 @@ const portfinder = require('portfinder')
 const express = require('express')
 const app = express()
 var goodsData = require('./mock/goods.json')
+var purchaseData = require('./mock/purchaseGood.json')
 
 var router = express.Router()
 
@@ -48,9 +49,19 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     watchOptions: {
       poll: config.dev.poll,
     },
+    //测试阶段 后台服务器
     before(app) {
       app.get('/api/goods', (req, res) => {
-        res.json(goodsData)
+        res.json({
+          errno: 0,
+          data: goodsData
+        })
+      })
+      app.get('/api/purchase', (req, res) => {
+        res.json({
+          errno: 0,
+          data: purchaseData
+        })
       })
 
     }

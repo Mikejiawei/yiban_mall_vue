@@ -1,54 +1,57 @@
 {
-    "status": "0",
-    "msg": "",
     "result": [{
             "yibanId": "1001",
             "yibanName": "名字",
             "contact": "联系方式",
             "goodName": "商品名字",
             "goodId": "商品id",
-            "buyTime":"购买时间",
-            "provide": "true|false[是否发放]"
+            "buyTime": "购买时间",
+            "provide": "true"
         },
         {
-            "productId": "1002",
-            "productName": "小米",
-            "productPrice": 2999,
-            "productImg": "2.jpg",
-            "sell": 122,
-            "rest": 10
+            "yibanId": "1002",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false"
         },
         {
-            "productId": "1003",
-            "productName": "XXX",
-            "productPrice": 699,
-            "productImg": "3.jpg",
-            "sell": 34,
-            "rest": 10
+            "yibanId": "1003",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false"
         },
         {
-            "productId": "1004",
-            "productName": "YYY",
-            "productPrice": 1299,
-            "productImg": "4.jpg",
-            "sell": 54,
-            "rest": 10
+            "yibanId": "1004",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false"
         },
         {
-            "productId": "1005",
-            "productName": "ZZ",
-            "productPrice": 123,
-            "productImg": "5.jpg",
-            "sell": 66,
-            "rest": 10
+            "yibanId": "1005",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false"
         },
         {
-            "productId": "1006",
-            "productName": "xx",
-            "productPrice": 345,
-            "productImg": "6.jpg",
-            "sell": 32,
-            "rest": 10
+            "yibanId": "1006",
+            "yibanName": "名字",
+            "contact": "联系方式",
+            "goodName": "商品名字",
+            "goodId": "商品id",
+            "buyTime": "购买时间",
+            "provide": "false"
         }
     ]
 }

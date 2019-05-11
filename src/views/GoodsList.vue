@@ -32,13 +32,13 @@
       <div class="accessory-list-wrap">
         <div class="accessory-list col-4">
           <ul>
-            <li v-for="item in goodsList" :key='item' >
+            <li v-for="(good,index) in goodsList" :key='index' >
               <div class="pic">
-                <a href="#"><img v-lazy ="'/static/' + item.productImg" ></a>
+                <a href="#"><img v-lazy ="'/static/' + good.imgUrl" ></a>
               </div>
               <div class="main">
-                <div class="name">{{item.productName}}</div>
-                <div class="price">{{item.productPrice}}</div>
+                <div class="name">{{good.name}}</div>
+                <div class="price">{{good.price}}</div>
                 <div class="btn-area">
                   <a href="javascript:;" class="btn btn-cart" @click="addList(item.productId)">加入购物车</a>
                 </div>
@@ -83,6 +83,7 @@ import NavFooter from "@/components/NavFooter.vue"
 import NavBread from '@/components/NavBread.vue'
 import Modal from "@/components/Modal.vue"
 import axios from 'axios'
+import { getGoods } from '@/api'
 
 export default {
     data(){
@@ -102,32 +103,20 @@ export default {
     },
     // 生命周期初始化
     mounted: function(){
-      this.getGoodsList()
-        // this.getGoodsList();
-        // this.checkLogin();
+      this._getGoods();
+      //this._getPurchase()
+      // this.getGoodsList();
+      // this.checkLogin();
 
     },
     
     methods:{
-      checkLogin(){
-        if(this.code){
-          axios.get("/goods/login",{
-                    params:{
-                      code:this.code 
-                    }
-                  }).then((result)=>{
-                    var res = result.data;
-                    this.goodsList = res.result.list;
-                    this.$store.commit("updateUserInfo",res.result.userName);
-          })
-        }
-      },
-
-      // 模拟接口 getGoodsList()
-      getGoodsList(){
-        axios.get("/api/goods").then((result)=>{
-          var res = result.data;
-          this.goodsList = res.result
+      
+      // 接口 获取goods
+      _getGoods(){
+        getGoods().then((goods)=>{
+          this.goodsList = goods.result
+          //console.log(this.goodsList)
         })
       },
 
