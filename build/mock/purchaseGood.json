@@ -6,7 +6,8 @@
             "goodName": "商品名字",
             "goodId": "商品id",
             "buyTime": "购买时间",
-            "provide": "true"
+            "provide": "true",
+            "price": "600"
         },
         {
             "yibanId": "1002",
@@ -15,7 +16,8 @@
             "goodName": "商品名字",
             "goodId": "商品id",
             "buyTime": "购买时间",
-            "provide": "false"
+            "provide": "false",
+            "price": "290"
         },
         {
             "yibanId": "1003",
@@ -24,7 +26,8 @@
             "goodName": "商品名字",
             "goodId": "商品id",
             "buyTime": "购买时间",
-            "provide": "false"
+            "provide": "false",
+            "price": "300"
         },
         {
             "yibanId": "1004",
@@ -33,7 +36,8 @@
             "goodName": "商品名字",
             "goodId": "商品id",
             "buyTime": "购买时间",
-            "provide": "false"
+            "provide": "false",
+            "price": "600"
         },
         {
             "yibanId": "1005",
@@ -42,7 +46,8 @@
             "goodName": "商品名字",
             "goodId": "商品id",
             "buyTime": "购买时间",
-            "provide": "false"
+            "provide": "false",
+            "price": "600"
         },
         {
             "yibanId": "1006",
@@ -51,7 +56,8 @@
             "goodName": "商品名字",
             "goodId": "商品id",
             "buyTime": "购买时间",
-            "provide": "false"
+            "provide": "false",
+            "price": "600"
         }
     ]
 }
