@@ -129,6 +129,7 @@ export default {
       //     })          
       // },
 
+      // git learn
       // 跳转支付的路由
         addList(productId){
           axios.post('/goods/addList',{
