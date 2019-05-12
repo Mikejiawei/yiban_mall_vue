@@ -125,8 +125,8 @@ export default {
           //console.log(this.goodsList)
         })
       },
-      _checkOrder(){
-        checkOrder({name:'abc'}).then((res)=>{
+      _checkOrder(data={}){
+        checkOrder(data).then((res)=>{
           console.log(res)
         })
       },
