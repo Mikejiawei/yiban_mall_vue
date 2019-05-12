@@ -1,8 +1,9 @@
 <template>
+  <!-- showDetail 函数 弹出用户信息模块 -->
   <div class="header" @click="showDetail">
     <div class="content-wrapper">
       <div class="avatar">
-        <img width="32" height="32" :src="user.avatar">
+        <img width="48" height="48" :src="user.avatar">
       </div>
       <div class="content">
         <div class="title">
@@ -71,10 +72,10 @@
       position: relative
       display: flex
       align-items: center
-      padding: 24px 12px 18px 24px
+      padding: 12px 12px 16px 16px
       .avatar
-        flex: 0 0 64px
-        width: 64px
+        flex: 0 0 48px
+        width: 48px
         margin-right: 16px
         img
           border-radius: 2px
@@ -85,10 +86,10 @@
           align-items: center
           margin-bottom: 8px
           .brand
-            width: 30px
-            height: 18px
-            bg-image('brand')
-            background-size: 30px 18px
+            width: 20px
+            height: 20px
+            bg-image('school')
+            background-size: 20px 20px
             background-repeat: no-repeat
           .name
             margin-left: 6px
