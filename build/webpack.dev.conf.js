@@ -13,6 +13,7 @@ const express = require('express')
 const app = express()
 var goodsData = require('./mock/goods.json')
 var purchaseData = require('./mock/purchaseGood.json')
+var userInfo = require('./mock/userInfo.json')
 var bodyParser = require('body-parser')
 
 var router = express.Router()
@@ -65,6 +66,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           errno: 0,
           data: purchaseData
+        })
+      })
+      app.get('/api/userInfo', (req, res) => {
+        res.json({
+          errno: 0,
+          data: userInfo
         })
       })
       app.post('/api/checkOrder', (req, res) => {

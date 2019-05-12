@@ -5,7 +5,9 @@
 <nav-bread>
     <span>Goods</span>
 </nav-bread>
-
+<!-- <div class="tab-wrapper">
+  <tab :tabs = "tabs"></tab>
+</div> -->
 
 
 <div class="accessory-result-page accessory-page">
@@ -50,15 +52,8 @@
     </div>
   </div>
 </div>
-<!-- <modal v-bind:mdShow="mdShow" v-on:close="closeModal">
-    <p slot="message">
-        请先登录,否则无法加入到购物车中!
-    </p>
-    <div slot="btnGroup">
-        <a class="btn btn--m" href="javascript:;" @click="mdShow = false">关闭</a>
-    </div>
-</modal>
-<modal v-bind:mdShow="mdShowCart" v-on:close="closeModal">
+
+<!-- <modal v-bind:mdShow="mdShowCart" v-on:close="closeModal">
         <p slot="message">
           <svg class="icon-status-ok">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-status-ok"></use>
@@ -69,7 +64,7 @@
           <a class="btn btn--m" href="javascript:;" @click="mdShowCart = false">继续购物</a>
           <router-link class="btn btn--m btn--red" href="javascript:;" to="/cart">查看购物车</router-link>
         </div>
-</modal> -->
+</modal>  -->
 
 <nav-footer></nav-footer>
     </div>    
@@ -80,11 +75,13 @@
 // import './../assets/css/login.css'
 import NavHeader from '@/components/NavHeader/NavHeader.vue'
 import NavFooter from "@/components/NavFooter.vue"
+import Tab from "@/components/tab.vue"
 import NavBread from '@/components/NavBread.vue'
 import Modal from "@/components/Modal.vue"
 import axios from 'axios'
 import { getGoods } from '@/api'
 import { checkOrder } from "@/api";
+import { getUserInfo } from "@/api";
 
 export default {
     // 返回必须是 data函数
@@ -92,6 +89,7 @@ export default {
         return{
             // 返回的是对象
             goodsList:[],
+            user:{},
             code:this.$route.query.code,
             mdShow:false,
             mdShowCart: false
@@ -130,6 +128,11 @@ export default {
           console.log(res)
         })
       },
+      _getUserInfo(){
+        getUserInfo().then((user)=>{
+          this.user = user
+        })
+      },
 
       // getGoodsList(){       
       //     axios.get("/goods/list").then((result)=>{
@@ -159,10 +162,38 @@ export default {
     
 
     computed:{
-    nickName(){
-      return this.$store.state.nickName;
+    tabs(){
+      return[
+        {
+        label:'商品',
+        components: Goods,
+        data:{
+          user: this.user
+          }
+        },
+        {
+          label:'热销',
+          components: Goods,
+          data:{
+            user:this.user
+          }
+        }
+      ]
     }
+    // nickName(){
+    //   return this.$store.state.nickName;
+    // }
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+  #app
+    .tab-wrapper
+      position: fixed
+      top: 136px
+      left: 0
+      right: 0
+      bottom: 0
+</style>
 
