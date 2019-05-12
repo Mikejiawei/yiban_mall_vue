@@ -1,4 +1,5 @@
 {
     "userID": "999",
-    "userName": "XYZ"
+    "userName": "XYZ",
+    "avatar": "/static/avatar.jpg"
 }
