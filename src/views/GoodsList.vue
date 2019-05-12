@@ -126,16 +126,9 @@ export default {
         })
       },
       _checkOrder(){
-        axios({
-          url:"api/checkOrder",
-          method:"post",
-          headers:{'Content-Type': 'application/x-www-form-urlencoded'},
-          data:{
-            name:"123"
-          }
-        }).then(res=>{
-          console.log(res.data)
-        }).catch(e=>{})
+        checkOrder({name:'abc'}).then((res)=>{
+          console.log(res)
+        })
       },
 
       // getGoodsList(){       

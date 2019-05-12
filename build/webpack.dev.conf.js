@@ -13,10 +13,14 @@ const express = require('express')
 const app = express()
 var goodsData = require('./mock/goods.json')
 var purchaseData = require('./mock/purchaseGood.json')
+var bodyParser = require('body-parser')
 
 var router = express.Router()
+//var multer = require('multer')
 
 app.use('/api', router)
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -63,13 +67,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           data: purchaseData
         })
       })
-      app.post('/api/checkOrder',(req,res)=>{
-        if(req.body){
-          res.json(req.body)
-        }
+      app.post('/api/checkOrder', (req, res) => {
+        res.json({
+          errno: 0,
+          data: purchaseData
+        })
         //var name = req.body.name
         //var pwd = req.body.pwd
-        res.end("bye")
       })
 
     }
