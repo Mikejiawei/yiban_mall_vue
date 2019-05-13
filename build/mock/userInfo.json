@@ -5,7 +5,7 @@
     "yb_sex": "性别",
     "yb_money": "持有网薪",
     "yb_exp": "经验值",
-    "yb_userhead": "/static/avatar",
+    "yb_userhead": "./../static/avatar.jpg",
     "yb_schoolid": "所在学校id",
     "yb_schoolname": "所在学校名称"
 }

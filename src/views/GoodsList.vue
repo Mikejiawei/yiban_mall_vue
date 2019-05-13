@@ -1,6 +1,6 @@
 <template>
     <div>
-<nav-header></nav-header>
+<nav-header :user ="user"></nav-header>
 
 <nav-bread>
     <span>Goods</span>
@@ -106,7 +106,8 @@ export default {
     // 生命周期初始化
     mounted: function(){
       this._getGoods();
-      this._checkOrder()
+      this._checkOrder();
+      this._getUserInfo();
       //this._getPurchase()
       // this.getGoodsList();
       // this.checkLogin();
@@ -131,6 +132,7 @@ export default {
       _getUserInfo(){
         getUserInfo().then((user)=>{
           this.user = user
+          console.log(user)
         })
       },
 

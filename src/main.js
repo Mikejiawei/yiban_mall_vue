@@ -6,6 +6,7 @@ import router from './router'
 import Vuex from 'vuex'
 import VueLazyload from 'vue-lazyload'
 import Cube from 'cube-ui'
+import './register'
 
 Vue.config.productionTip = false
 Vue.use(Vuex)
@@ -13,7 +14,6 @@ Vue.use(VueLazyload, {
   loading: './../static/loading.gif'
 })
 Vue.use(Cube)
-
 
 const store = new Vuex.Store({
   state: {

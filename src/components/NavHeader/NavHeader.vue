@@ -3,12 +3,12 @@
   <div class="header" @click="showDetail">
     <div class="content-wrapper">
       <div class="avatar">
-        <img width="48" height="48" :src="user.avatar">
+        <img width="48" height="48" :src="user.yb_userhead">
       </div>
       <div class="content">
         <div class="title">
           <span class="brand"></span>
-          <span class="name">{{user.name}}</span>
+          <span class="name">{{user.yb_username}}</span>
         </div>
         <div class="description">
           {{user.description}}/{{user.deliveryTime}}分钟送达
@@ -28,7 +28,7 @@
       <i class="icon-keyboard_arrow_right"></i>
     </div>
     <div class="background">
-      <img :src="user.avatar" width="100%" height="100%">
+      <img :src="user.yb_userhead" width="100%" height="100%">
     </div>
   </div>
 </template>
