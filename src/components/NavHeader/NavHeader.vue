@@ -47,6 +47,7 @@
     },
     methods: {
       showDetail() {
+        // 调用creat-api 注册
         this.headerDetailComp = this.headerDetailComp || this.$createHeaderDetail({
           $props: {
             user: 'user'
