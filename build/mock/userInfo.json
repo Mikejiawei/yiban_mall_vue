@@ -1,5 +1,11 @@
 {
-    "userID": "999",
-    "userName": "XYZ",
-    "avatar": "/static/avatar.jpg"
+    "yb_userid": "易班用户id",
+    "yb_username": "用户名",
+    "yb_usernick": "用户昵称",
+    "yb_sex": "性别",
+    "yb_money": "持有网薪",
+    "yb_exp": "经验值",
+    "yb_userhead": "/static/avatar",
+    "yb_schoolid": "所在学校id",
+    "yb_schoolname": "所在学校名称"
 }
