@@ -19,7 +19,7 @@
       <a href="javascript:void(0)" class="filterby stopPop">Filter by</a>
     </div> -->
     <div class="accessory-result">
-      <goods :goodsList = "goodsList"></goods>
+      <goods></goods>
       <!-- search result accessories list -->
       <!-- <div class="accessory-list-wrap">
         <div class="accessory-list col-4">

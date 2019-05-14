@@ -1,6 +1,6 @@
 <template>
     <div class="scroll-wrapper">
-        <!-- <cube-scroll-nav
+        <cube-scroll-nav
             :side="true"
             :data="data"
             :current="current"
@@ -21,45 +21,41 @@
                 </li>
             </ul>
             </cube-scroll-nav-panel>
-        </cube-scroll-nav> -->
-        <p>{{goodsList[0].name}}</p>
+        </cube-scroll-nav>
     </div>   
 </template>
 
 <script>
+import { getGoods } from '@/api'
 
-    export default {
-        name: 'Goods',
-        props: {
-        goodsList: {
-            type: Array,
-            default() {
-            return []
-            }
-        }
-        },
-       created(){
-           this.data = this.goodsList
-       },
-        data(){
-        return{
-            // 返回的是对象
-            data: []
-            //current: this.goodsList[0].name
-            //code:this.$route.query.code,
-            //mdShow:false,
-            //mdShowCart: false
-
-        }
+export default {
+    name: 'Goods',
+    created(){
+        this._getGoods()
     },
-        methods: {
-            changeHandler(label) {
-                console.log('changed to:', label)
-            },
-            stickyChangeHandler(current) {
-                console.log('sticky-change', current)
-            }
+    data(){
+    return{
+        // 返回的是对象
+        data: [],
+        current: ""
+    }
+},
+
+methods: {
+    _getGoods(){
+        getGoods().then((goods)=>{
+          this.data = goods.result
+          this.current = this.data[0].name
+          //console.log(this.goodsList)
+        })
+      },
+    changeHandler(label) {
+        console.log('changed to:', label)
+        },
+    stickyChangeHandler(current) {
+        console.log('sticky-change', current)
         }
     }
+}
 </script>
 
