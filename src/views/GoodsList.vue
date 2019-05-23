@@ -20,25 +20,6 @@
     </div> -->
     <div class="accessory-result">
       <goods></goods>
-      <!-- search result accessories list -->
-      <!-- <div class="accessory-list-wrap">
-        <div class="accessory-list col-4">
-          <ul>
-            <li v-for="(good,index) in goodsList" :key='index' >
-              <div class="pic">
-                <a href="#"><img v-lazy ="'/static/' + good.imgUrl" ></a>
-              </div>
-              <div class="main">
-                <div class="name">{{good.name}}</div>
-                <div class="price">{{good.price}}</div>
-                <div class="btn-area">
-                  <a href="javascript:;" class="btn btn-cart" @click="addList(item.productId)">加入购物车</a>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div> -->
     </div>
   </div>
 </div>
