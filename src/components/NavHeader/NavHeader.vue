@@ -12,22 +12,10 @@
           <span class="money"></span>
           <span class="yiban_money">{{user.yb_money}}</span>
         </div>
-        
-        <!-- <div class="description">
-          {{user.description}}/{{user.deliveryTime}}分钟送达
-        </div> -->
-        <!-- <div v-if="user.supports" class="support">
-          <support-ico :size=1 :type="user.supports[0].type"></support-ico>
-          <span class="text">{{user.supports[0].description}}</span>
-        </div> -->
       </div>
-      <!-- <div v-if="user.supports" class="support-count">
-        <span class="count">{{user.supports.length}}个</span>
-        <i class="icon-keyboard_arrow_right"></i>
-      </div> -->
     </div>
     <div class="bulletin-wrapper">
-      <span class="bulletin-title"></span><span class="bulletin-text">{{user.bulletin}}</span>
+      <span class="bulletin-title"></span><span class="bulletin-text">"请点击头像查看详情！"</span>
       <i class="icon-keyboard_arrow_right"></i>
     </div>
     <div class="background">

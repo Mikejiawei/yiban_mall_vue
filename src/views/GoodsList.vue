@@ -5,19 +5,10 @@
 <nav-bread>
     <span>Goods</span>
 </nav-bread>
-<!-- <div class="tab-wrapper">
-  <tab :tabs = "tabs"></tab>
-</div> -->
 
 
 <div class="accessory-result-page accessory-page">
   <div class="container">
-    <!-- <div class="filter-nav">
-      <span class="sortby">Sort by:</span>
-      <a href="javascript:void(0)" class="default cur">Default</a>
-      <a href="javascript:void(0)" class="price">Price <svg class="icon icon-arrow-short"><use xlink:href="#icon-arrow-short"></use></svg></a>
-      <a href="javascript:void(0)" class="filterby stopPop">Filter by</a>
-    </div> -->
     <div class="accessory-result">
       <goods></goods>
     </div>
@@ -36,8 +27,8 @@
           <router-link class="btn btn--m btn--red" href="javascript:;" to="/cart">查看购物车</router-link>
         </div>
 </modal>  -->
-
-<nav-footer></nav-footer>
+<my-order></my-order>
+<!-- <nav-footer></nav-footer> -->
     </div>    
 </template>
 <script>
@@ -46,7 +37,7 @@
 // import './../assets/css/login.css'
 import NavHeader from '@/components/NavHeader/NavHeader.vue'
 import NavFooter from "@/components/NavFooter.vue"
-import Tab from "@/components/tab.vue"
+import MyOrder from "@/components/MyOrder.vue"
 import Goods from "@/components/Goods.vue"
 import NavBread from '@/components/NavBread.vue'
 import Modal from "@/components/Modal.vue"
@@ -74,7 +65,8 @@ export default {
         NavFooter: NavFooter,
         NavBread: NavBread,
         Modal:Modal,
-        Goods: Goods
+        Goods: Goods,
+        MyOrder: MyOrder
     },
     // 生命周期初始化
     mounted: function(){
@@ -99,7 +91,7 @@ export default {
       },
       _checkOrder(data={}){
         checkOrder(data).then((res)=>{
-          console.log(res)
+          //console.log(res)
         })
       },
       _getUserInfo(){
