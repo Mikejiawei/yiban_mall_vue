@@ -15,19 +15,7 @@
   </div>
 </div>
 
-<!-- <modal v-bind:mdShow="mdShowCart" v-on:close="closeModal">
-        <p slot="message">
-          <svg class="icon-status-ok">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-status-ok"></use>
-          </svg>
-          <span>加入购物车成功!</span>
-        </p>
-        <div slot="btnGroup">
-          <a class="btn btn--m" href="javascript:;" @click="mdShowCart = false">继续购物</a>
-          <router-link class="btn btn--m btn--red" href="javascript:;" to="/cart">查看购物车</router-link>
-        </div>
-</modal>  -->
-<my-order></my-order>
+<my-order :user ="user"></my-order>
 <!-- <nav-footer></nav-footer> -->
     </div>    
 </template>
@@ -40,7 +28,6 @@ import NavFooter from "@/components/NavFooter.vue"
 import MyOrder from "@/components/MyOrder.vue"
 import Goods from "@/components/Goods.vue"
 import NavBread from '@/components/NavBread.vue'
-import Modal from "@/components/Modal.vue"
 import axios from 'axios'
 import { getGoods } from '@/api'
 import { checkOrder } from "@/api";
@@ -64,7 +51,6 @@ export default {
         NavHeader: NavHeader,
         NavFooter: NavFooter,
         NavBread: NavBread,
-        Modal:Modal,
         Goods: Goods,
         MyOrder: MyOrder
     },

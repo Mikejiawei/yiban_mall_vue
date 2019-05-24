@@ -24,6 +24,14 @@
 			</form>
 		</div>
 	</div>
+<modal v-bind:mdShow="mdShow">
+        <p slot="message">
+			<span>加入购物车成功!</span>
+        </p>
+        <div slot="btnGroup">
+		<a class="btn btn--m" href="javascript:;">继续购物</a>
+        </div>
+</modal> 
 </div>
 	
 
@@ -33,14 +41,23 @@
 import './../assets/bootstrap/css/bootstrap.css'
 import "./../assets/bootstrap/js/jquery.min.js"
 import './../assets/bootstrap/js/bootstrap.min.js'
+import Modal from "@/components/Modal.vue"
+
 export default {
     data(){
         return{
             username:"",
             name: this.$route.query.name,
-            price:this.$route.query.price
+			price:this.$route.query.price,
+			mdShow:true
         }
-    }
+	},
+	components:{
+		Modal:Modal
+	},
+	methods:{
+		
+	}
 }
 </script>
 <style scoped>

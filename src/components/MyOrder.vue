@@ -4,7 +4,7 @@
     <div class="content">
     <div class="content-left">
         <div class="logo-wrapper">
-            <router-link :to="{path:'/MyList',query:{}}">
+            <router-link :to="{path:'/MyList',query:{userID:user.yb_userid}}">
                 <div class="logo">
                 <i class="cubeic-mall"></i>
                 </div>
@@ -21,21 +21,21 @@
 </div>
 </template>
 <script>
-import { checkOrder } from "@/api"
+
 export default {
+    props: {
+    user: {
+        type: Object,
+        default() {
+        return {}
+        }
+    }
+    },
     data(){
         return{
 
         }
     },
-    methods:{
-        _checkOrder(data={}){
-        checkOrder(data).then((res)=>{
-        console.log(res)
-        })
-    }
-    }
-    
 }
 </script>
 <style lang="stylus" scoped>
