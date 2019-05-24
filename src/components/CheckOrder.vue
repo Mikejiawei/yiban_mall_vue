@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-offset-1 col-xs-10">
-			<form class="form-container" id="form">
+			<form class="form" id="form">
 				<h2>确认订单</h2>
 					<div class="form-group">
 						<label class="control-label" for="userName">姓名</label>
@@ -49,7 +49,7 @@ html{
     min-height: 100%;
 }
 
-.form-container{
+.form{
 	padding: 30px;
 	margin-top: 20%;
     background-color: blueviolet;
@@ -61,7 +61,7 @@ html{
 }
 
 
-.form-container h2{
+.form h2{
 	text-align: center;
 	padding-bottom: 20px;
 	color: black;
