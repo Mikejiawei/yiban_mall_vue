@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { getAnno } from "@/api";
   export default {
     name: 'header-detail',
     //mixins: [popupMixin],
@@ -44,12 +45,20 @@
             visible: false
         }
     },
+    // mounted(){
+    //   this._getAnno();
+    // },
     methods:{
         show(){
             this.visible = true
         },
         hide(){
             this.visible = false
+        },
+        _getAnno(){
+          getAnno().then((res)=>{
+            // 待续
+          })
         }
     }
   }

@@ -65,7 +65,7 @@ import './../assets/bootstrap/js/bootstrap.min.js'
   margin-right: 10%;
   visibility: visible;
   display: flex;
-  color:orange;
+  color:black;
   height:100px;
   padding: 10px;
   background:lightblue;
@@ -85,7 +85,11 @@ import './../assets/bootstrap/js/bootstrap.min.js'
 .content{
   position: absolute;
   margin-top: 28px;
-  margin-left: 20%;
+  margin-left: 30%;
+}
+.btn-wrap{
+  position: relative;
+  margin-top: 10px;
 }
 
 </style>
